@@ -7,3 +7,6 @@
 */
 "NSLocationWhenInUseUsageDescription" = "We need your location to provide geo-based magic.";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "We need your location even in the background to detect entry and exit.";
+"NSLocationAlwaysUsageDescription" = "We need your location always to detect geofence events even when the app is closed.";
+"NSUserNotificationUsageDescription" = "We use notifications to inform you when you enter or exit a geofence.";
+

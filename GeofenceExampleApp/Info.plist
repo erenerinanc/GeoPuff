@@ -2,21 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(NSLocationWhenInUseUsageDescription)</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(NSLocationAlwaysAndWhenInUseUsageDescription)</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
 	<key>CFBundleDisplayName</key>
 	<string>GeoPuff</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
-		<key>UIApplicationSupportsTabbedSceneCollection</key>
-		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UIApplicationSupportsTabbedSceneCollection</key>
 		<false/>
 		<key>UISceneConfigurations</key>
 		<dict>
@@ -31,5 +23,17 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(NSLocationWhenInUseUsageDescription)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(NSLocationAlwaysAndWhenInUseUsageDescription)</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(NSLocationAlwaysUsageDescription)</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>$(NSUserNotificationUsageDescription)</string>
 </dict>
 </plist>

@@ -7,3 +7,6 @@
 */
 "NSLocationWhenInUseUsageDescription" = "Konumuna göre sihirli özellikler sunabilmemiz için iznin gerekli!";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "Giriş ve çıkışları algılamak için arka planda da konumuna ihtiyacımız var.";
+"NSLocationAlwaysUsageDescription" = "Uygulama kapalıyken bile bölgeye giriş ve çıkışları algılayabilmek için konumunuza ihtiyacımız var.";
+"NSUserNotificationUsageDescription" = "Bir bölgeye giriş veya çıkış yaptığınızda sizi bilgilendirmek için bildirimleri kullanıyoruz.";
+

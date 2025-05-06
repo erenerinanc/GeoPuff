@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		756C787C2DC92D7300FDAA28 /* GeofenceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 756C787B2DC92D7300FDAA28 /* GeofenceInterface */; };
+		7575AD1C2DCA258A0018D526 /* GeofenceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 756C787B2DC92D7300FDAA28 /* GeofenceInterface */; };
+		7575AD412DCA2AFF0018D526 /* GeofenceInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 7575AD402DCA2AFF0018D526 /* GeofenceInterface */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756C787C2DC92D7300FDAA28 /* GeofenceInterface in Frameworks */,
+				7575AD412DCA2AFF0018D526 /* GeofenceInterface in Frameworks */,
+				7575AD1C2DCA258A0018D526 /* GeofenceInterface in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = GeofenceExampleApp;
 			packageProductDependencies = (
 				756C787B2DC92D7300FDAA28 /* GeofenceInterface */,
+				7575AD402DCA2AFF0018D526 /* GeofenceInterface */,
 			);
 			productName = GeofenceExampleApp;
 			productReference = 756C78462DC92D2100FDAA28 /* GeofenceExampleApp.app */;
@@ -216,7 +219,7 @@
 			mainGroup = 756C783D2DC92D2100FDAA28;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				756C787A2DC92D7300FDAA28 /* XCLocalSwiftPackageReference "../GeofenceInterface" */,
+				7575AD3F2DCA2AFF0018D526 /* XCLocalSwiftPackageReference "../GeofenceInterface" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 756C78472DC92D2100FDAA28 /* Products */;
@@ -581,7 +584,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		756C787A2DC92D7300FDAA28 /* XCLocalSwiftPackageReference "../GeofenceInterface" */ = {
+		7575AD3F2DCA2AFF0018D526 /* XCLocalSwiftPackageReference "../GeofenceInterface" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../GeofenceInterface;
 		};
@@ -589,6 +592,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		756C787B2DC92D7300FDAA28 /* GeofenceInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GeofenceInterface;
+		};
+		7575AD402DCA2AFF0018D526 /* GeofenceInterface */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GeofenceInterface;
 		};

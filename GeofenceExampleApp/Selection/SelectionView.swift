@@ -10,14 +10,10 @@ import SwiftUI
 import GeofenceInterface
 
 class SelectionViewModel: ObservableObject {
-    let availableLocations: [GeoLocation] = [
-        GeoLocation(name: "Kadıköy", latitude: 40.9890, longitude: 29.0280),
-        GeoLocation(name: "Beşiktaş", latitude: 41.0438, longitude: 29.0094),
-        GeoLocation(name: "Bornova", latitude: 38.4692, longitude: 27.2220),
-        GeoLocation(name: "Alsancak", latitude: 38.4332, longitude: 27.1302),
-        GeoLocation(name: "Bostanlı", latitude: 38.9422, longitude: 30.6364)
-    ]
+    let availableLocations = GeoSelectionModel.ViewModel.availableLocations
     @Published var selectedLocations: [GeoLocation] = []
+    @Published var notifiedLocation: GeoLocation?
+    @Published var isEntered: Bool = false
 }
 
 struct SelectionView: View {
@@ -53,14 +49,29 @@ struct SelectionView: View {
                     }
                 }
 
-                Button("Start Geofence") {
-                    selectionHandler(viewModel.selectedLocations)
+                GeoButton(
+                    title: "start_geofence_button".localized(),
+                    action: {
+                        selectionHandler(viewModel.selectedLocations)
+                    },
+                    isEnabled: !viewModel.selectedLocations.isEmpty
+                )
+        
+                if let location = viewModel.notifiedLocation {
+                    GeoInfoView(
+                        iconImage: viewModel.isEntered ? "location.fill" : "arrow.uturn.left.circle.fill",
+                        foregroundColor: viewModel.isEntered ? .green : .orange,
+                        title: viewModel.isEntered ? "entered_region_title".localized(with: location.name) : "exited_region_title".localized(with: location.name),
+                        subtitle: viewModel.isEntered
+                        ? "entered_region_subtitle".localized()
+                        : "exited_region_subtitle".localized(),
+                        actionHandler: {
+                            viewModel.notifiedLocation = nil
+                        },
+                        backgroundColor: viewModel.isEntered ? Color.green : Color.orange,
+                        notifiedLocation: viewModel.notifiedLocation?.name ?? "")
                 }
-                .disabled(viewModel.selectedLocations.isEmpty)
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+
             }
             .navigationTitle("Select Locations")
         }

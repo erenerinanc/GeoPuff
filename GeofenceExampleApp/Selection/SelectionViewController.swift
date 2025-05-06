@@ -14,6 +14,7 @@ class SelectionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSwiftUIView()
+        listenNotifications()
     }
     
     private func addSwiftUIView() {
@@ -27,6 +28,24 @@ class SelectionViewController: BaseViewController {
         }
 
         addSwiftUIView(suiView)
+    }
+    
+    private func listenNotifications() {
+        NotificationCenter.default.addObserver(
+            forName: .didReceiveLocationNotification,
+            object: nil,
+            queue: .main
+        ) { notification in
+            if let locationId = notification.userInfo?["regionId"] as? String {
+                let geoLocation = GeoSelectionModel.ViewModel.getSelectedLocation(with: locationId)
+                self.viewModel.notifiedLocation = geoLocation
+            }
+            
+            if let isEntered = notification.userInfo?["isEntered"] as? Bool {
+                self.viewModel.isEntered = isEntered
+            }
+        }
+
     }
 
 }

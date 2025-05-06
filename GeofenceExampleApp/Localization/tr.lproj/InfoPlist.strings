@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  GeofenceExampleApp
+
+  Created by Eren Erinanç on 6.05.2025.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Konumuna göre sihirli özellikler sunabilmemiz için iznin gerekli!";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Giriş ve çıkışları algılamak için arka planda da konumuna ihtiyacımız var.";

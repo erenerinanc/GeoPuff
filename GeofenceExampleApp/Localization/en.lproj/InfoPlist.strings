@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  GeofenceExampleApp
+
+  Created by Eren Erinanç on 6.05.2025.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "We need your location to provide geo-based magic.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "We need your location even in the background to detect entry and exit.";

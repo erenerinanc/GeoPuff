@@ -37,6 +37,7 @@ class SelectionViewController: BaseViewController {
             queue: .main
         ) { notification in
             if let locationId = notification.userInfo?["regionId"] as? String {
+                GeoManager.shared.stopMonitoring()
                 let geoLocation = GeoSelectionModel.ViewModel.getSelectedLocation(with: locationId)
                 self.viewModel.notifiedLocation = geoLocation
             }

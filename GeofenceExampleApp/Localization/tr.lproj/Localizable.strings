@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  GeofenceExampleApp
+
+  Created by Eren Erinanç on 6.05.2025.
+  
+*/
+"start_geofence_button" = "Geofence'i Başlat";
+"entered_region_title" = "%@ bölgesine girdiniz";
+"entered_region_subtitle" = "Hoş geldiniz!🌟 Geofence takibi aktif.";
+"exited_region_title" = "%@ bölgesinden çıktınız";
+"exited_region_subtitle" = "Bölgeden ayrıldınız 🚶‍♂️. Geri döndüğünüzde sizi bilgilendireceğiz.";
+"explore_on_google" = "%@ hakkında Google'da ara";
+"select_locations_title" = "Bölgeleri Seçin";
